@@ -1,0 +1,334 @@
+.main {
+	background-color: #000;
+}
+
+.layout-grid-main {
+	display: grid;
+	grid-template-areas: 
+		"header header header"
+		"nav nav nav"
+		"body body body"
+		"footer footer footer";
+	grid-gap: 10px;
+	background-color: grey;
+	padding: 3px;
+}
+
+.layout-grid-main > div {
+	background-color: #333;
+  	text-align: center;
+  	padding: 20px 0;
+ 	 font-size: 20px;
+}
+
+.header-main {
+	grid-area: header;
+
+}
+
+.header-image {
+	background-image: url("dimsum.jpg");
+	position: relative;
+	background-size: cover;
+	height: 400px;
+	filter: opacity(50%);
+	animation: fadein 6s;
+}
+
+.header-text {
+	position: absolute;
+	text-align: left;
+	padding: 10px;
+	color: white;
+	bottom: 160px;
+	left: 11px;
+	height: 200px;
+	width: 96.75%;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	background: rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.5);
+    animation: fadein 4s;
+}
+
+.nav-main {
+	grid-area: nav;
+	justify-content: center;
+}
+
+.body-main { 
+	grid-area: body;
+}
+
+.body-text {
+	height: 50vh;
+	padding: 30px;
+	color: white;
+	text-align: left;
+	background: rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.body-text .p1 {
+	font-size: 30px;
+}
+
+.footer-main {
+	grid-area: footer;
+	justify-content: center;
+}
+
+.navigation {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navigation a {
+    float: left;
+    display: block;
+    color: seashell;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navigation a:hover {
+    background-color: bisque;
+    color: black;
+}
+
+.navigation .ThreeBars {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .navigation a:not(:first-child) {display: none;}
+    .navigation a.ThreeBars {
+      float: right;
+      display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navigation.responsive {position: relative;}
+    .navigation.responsive a.ThreeBars {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+}
+
+.navigation.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  /*This is the start of the Footer CSS*/
+  .footer-group{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	text-align: left;
+
+	padding: 50px 60px 40px;
+	margin-top: 80px;
+	overflow: hidden;
+}
+
+/* Footer left */
+
+.footer-group .footer-left{
+	float: left;
+}
+
+/* The company logo */
+
+.footer-group h3{
+	color:  #ffffff;
+	font: normal 36px;
+	margin: 0 0 10px;
+}
+
+.footer-group h3 span{
+	color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-group .footer-links{
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-group .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-group .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer social icons */
+
+.footer-group .footer-icons{
+	margin-top: 40px;
+}
+
+.footer-group .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 20px;
+	background-color:  #33383b;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	padding: 10px;
+
+}
+
+/* Footer Right */
+
+.footer-group .footer-right{
+	float: right;
+}
+
+.footer-group .footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: #ffffff;
+}
+
+/* The contact form */
+
+.footer-group form{
+	display: inline-block;
+}
+
+.footer-group form input,
+.footer-group form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #1f2022;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #d1d2d2;
+
+	width: 400px;
+	padding: 18px;
+}
+
+.footer-group ::-webkit-input-placeholder {
+	color:  #5c666b;
+}
+
+.footer-group ::-moz-placeholder {
+	color:  #5c666b;
+	opacity: 1;
+}
+
+.footer-group :-ms-input-placeholder{
+	color:  #5c666b;
+}
+
+
+.footer-group form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-group form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-group form button{
+	border-radius: 3px;
+	background-color:  #33383b;
+	color: #ffffff;
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: right;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 1000px) {
+
+	.footer-group {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-group .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-group form input,
+	.footer-group form textarea{
+		width: 250px;
+	}
+
+	.footer-group form button{
+		padding: 10px 35px;
+	}
+
+}
+
+@media (max-width: 800px) {
+
+	.footer-group{
+		padding: 30px;
+	}
+
+	.footer-group .footer-left,
+	.footer-group .footer-right{
+		float: none;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.footer-group .footer-left{
+		margin-bottom: 40px;
+	}
+
+	.footer-group form{
+		margin-top: 30px;
+	}
+
+	.footer-group form{
+		display: block;
+	}
+
+	.footer-group form button{
+		float: none;
+	}
+}
+
+* {
+	animation: fadein 1s;
+}
+
+@keyframes fadein {
+	from { opacity: 0; }
+	to   { opacity: 1; }
+}
